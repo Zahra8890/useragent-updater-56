@@ -47,9 +47,6 @@ const AdviceSection = () => {
                   <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-0.5 rounded-full">
                     {article.category}
                   </span>
-                  <span className="text-xs text-gray-500">
-                    {article.readTime} read
-                  </span>
                 </div>
                 
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">
@@ -60,10 +57,7 @@ const AdviceSection = () => {
                   {article.summary}
                 </p>
                 
-                <div className="mt-auto pt-4 flex items-center justify-between">
-                  <span className="text-xs text-gray-500">
-                    {article.publishDate}
-                  </span>
+                <div className="mt-auto pt-4">
                   <span className="text-sm font-medium text-blue-600">
                     Read article →
                   </span>

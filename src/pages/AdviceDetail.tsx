@@ -54,12 +54,6 @@ const AdviceDetail = () => {
             <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-0.5 rounded-full">
               {article.category}
             </span>
-            <span className="text-sm text-gray-500">
-              {article.publishDate}
-            </span>
-            <span className="text-sm text-gray-500 ml-auto">
-              {article.readTime} read
-            </span>
           </div>
           
           <h1 className="text-3xl md:text-4xl font-bold mb-6">{article.title}</h1>
@@ -116,9 +110,6 @@ const AdviceDetail = () => {
                     <div className="flex justify-between items-start mb-2">
                       <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-0.5 rounded-full">
                         {a.category}
-                      </span>
-                      <span className="text-xs text-gray-500">
-                        {a.readTime} read
                       </span>
                     </div>
                     <h3 className="font-medium mb-2">{a.title}</h3>

@@ -86,12 +86,6 @@ const Advice = () => {
                   <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-0.5 rounded-full">
                     {article.category}
                   </span>
-                  <span className="text-xs text-gray-500">
-                    {article.publishDate}
-                  </span>
-                  <span className="text-xs text-gray-500 ml-auto">
-                    {article.readTime} read
-                  </span>
                 </div>
                 
                 <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900">

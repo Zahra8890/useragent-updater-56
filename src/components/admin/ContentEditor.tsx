@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from 'sonner';
 import { AdviceArticle, adviceArticles } from '@/utils/userAgentData';
 
@@ -38,13 +37,6 @@ const ContentEditor = () => {
     }));
   };
   
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  
   const handleAddNew = () => {
     setSelectedArticle(null);
     setFormData({
@@ -54,7 +46,7 @@ const ContentEditor = () => {
       content: '',
       publishDate: new Date().toISOString().split('T')[0],
       category: '',
-      readTime: '5 min'
+      readTime: ''
     });
   };
   
@@ -89,7 +81,7 @@ const ContentEditor = () => {
       content: '',
       publishDate: new Date().toISOString().split('T')[0],
       category: '',
-      readTime: '5 min'
+      readTime: ''
     });
   };
   
@@ -106,7 +98,7 @@ const ContentEditor = () => {
       content: '',
       publishDate: new Date().toISOString().split('T')[0],
       category: '',
-      readTime: '5 min'
+      readTime: ''
     });
     
     toast.success('Article deleted successfully');
@@ -138,7 +130,7 @@ const ContentEditor = () => {
                   }`}
                 >
                   <div className="font-medium">{article.title}</div>
-                  <div className="text-sm text-gray-500">{article.category} - {article.publishDate}</div>
+                  <div className="text-sm text-gray-500">{article.category}</div>
                 </div>
               ))
             ) : (
@@ -180,7 +172,7 @@ const ContentEditor = () => {
                 />
               </div>
               
-              <div>
+              <div className="hidden">
                 <label htmlFor="readTime" className="mb-1 block text-sm font-medium text-gray-700">
                   Read Time
                 </label>
