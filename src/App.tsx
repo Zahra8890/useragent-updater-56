@@ -7,8 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import UserAgentDetail from "./pages/UserAgentDetail";
+import UserAgents from "./pages/UserAgents";
 import Advice from "./pages/Advice";
 import AdviceDetail from "./pages/AdviceDetail";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,8 +25,12 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/user-agent/:id" element={<UserAgentDetail />} />
+            <Route path="/user-agents" element={<UserAgents />} />
+            <Route path="/user-agents/:category" element={<UserAgents />} />
             <Route path="/advice" element={<Advice />} />
             <Route path="/advice/:id" element={<AdviceDetail />} />
+            <Route path="/wp-admin" element={<Admin />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
