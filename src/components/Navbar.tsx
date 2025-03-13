@@ -4,9 +4,38 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { motion } from 'framer-motion';
 
+interface Page {
+  id: string;
+  title: string;
+  slug: string;
+  position: 'top' | 'bottom';
+}
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const [navItems, setNavItems] = useState([
+    { id: '1', title: 'Home', slug: '/', position: 'top' },
+    { id: '2', title: 'User Agents', slug: '/user-agents', position: 'top' },
+    { id: '3', title: 'Advice', slug: '/advice', position: 'top' },
+  ]);
+  
+  useEffect(() => {
+    // Load navigation items from localStorage if available
+    const savedPages = localStorage.getItem('sitePages');
+    if (savedPages) {
+      const parsedPages = JSON.parse(savedPages);
+      // Get only top navigation items
+      const topNavItems = parsedPages.filter((page: Page) => page.position === 'top');
+      if (topNavItems.length > 0) {
+        setNavItems(topNavItems.map((page: Page) => ({
+          id: page.id,
+          title: page.title,
+          slug: page.slug
+        })));
+      }
+    }
+  }, []);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +45,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'User Agents', path: '/user-agents' },
-    { name: 'Advice', path: '/advice' },
-  ];
 
   return (
     <motion.header
@@ -46,16 +69,16 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-1">
           {navItems.map((item) => (
             <Link 
-              key={item.path}
-              to={item.path}
+              key={item.id}
+              to={item.slug}
               className={cn(
                 "px-4 py-2 rounded-full text-sm font-medium transition-all",
-                location.pathname === item.path
+                location.pathname === item.slug
                   ? "bg-blue-50 text-blue-700"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
               )}
             >
-              {item.name}
+              {item.title}
             </Link>
           ))}
         </nav>

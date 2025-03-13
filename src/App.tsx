@@ -10,6 +10,9 @@ import UserAgentDetail from "./pages/UserAgentDetail";
 import UserAgents from "./pages/UserAgents";
 import Advice from "./pages/Advice";
 import AdviceDetail from "./pages/AdviceDetail";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +32,9 @@ const App = () => (
             <Route path="/user-agents/:category" element={<UserAgents />} />
             <Route path="/advice" element={<Advice />} />
             <Route path="/advice/:id" element={<AdviceDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="/wp-admin" element={<Admin />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
