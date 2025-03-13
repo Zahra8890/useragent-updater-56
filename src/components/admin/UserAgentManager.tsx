@@ -244,6 +244,19 @@ const UserAgentManager = () => {
               </div>
               
               <div>
+                <label htmlFor="lastUpdated" className="mb-1 block text-sm font-medium text-gray-700">
+                  Last Updated
+                </label>
+                <Input
+                  id="lastUpdated"
+                  name="lastUpdated"
+                  type="date"
+                  value={formData.lastUpdated || new Date().toISOString().split('T')[0]}
+                  onChange={handleInputChange}
+                />
+              </div>
+              
+              <div>
                 <label htmlFor="popularity" className="mb-1 block text-sm font-medium text-gray-700">
                   Popularity (%)
                 </label>

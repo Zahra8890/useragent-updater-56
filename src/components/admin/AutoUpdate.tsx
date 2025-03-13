@@ -5,6 +5,12 @@ import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { X, Plus } from 'lucide-react';
+
+interface Source {
+  id: string;
+  url: string;
+}
 
 interface Schedule {
   enabled: boolean;
@@ -15,7 +21,7 @@ interface Schedule {
 }
 
 interface AutoUpdateSettings {
-  sourceUrl: string;
+  sources: Source[];
   enabled: boolean;
   schedule: Schedule;
   lastRun: string | null;
@@ -24,7 +30,7 @@ interface AutoUpdateSettings {
 
 const AutoUpdate = () => {
   const [settings, setSettings] = useState<AutoUpdateSettings>({
-    sourceUrl: '',
+    sources: [{ id: '1', url: '' }],
     enabled: false,
     schedule: {
       enabled: false,
@@ -35,10 +41,31 @@ const AutoUpdate = () => {
     nextRun: null
   });
   
-  const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAddSource = () => {
     setSettings(prev => ({
       ...prev,
-      sourceUrl: e.target.value
+      sources: [...prev.sources, { id: Date.now().toString(), url: '' }]
+    }));
+  };
+  
+  const handleRemoveSource = (id: string) => {
+    if (settings.sources.length === 1) {
+      toast.error('You must have at least one source');
+      return;
+    }
+    
+    setSettings(prev => ({
+      ...prev,
+      sources: prev.sources.filter(source => source.id !== id)
+    }));
+  };
+  
+  const handleSourceChange = (id: string, url: string) => {
+    setSettings(prev => ({
+      ...prev,
+      sources: prev.sources.map(source => 
+        source.id === id ? { ...source, url } : source
+      )
     }));
   };
   
@@ -60,8 +87,10 @@ const AutoUpdate = () => {
   };
   
   const handleSave = () => {
-    if (!settings.sourceUrl && settings.enabled) {
-      toast.error('Please enter a source URL');
+    // Validate sources
+    const emptySourcesExist = settings.enabled && settings.sources.some(source => !source.url);
+    if (emptySourcesExist) {
+      toast.error('Please enter URLs for all sources');
       return;
     }
     
@@ -90,8 +119,8 @@ const AutoUpdate = () => {
   };
   
   const handleRunNow = () => {
-    if (!settings.sourceUrl) {
-      toast.error('Please enter a source URL and save settings first');
+    if (settings.sources.every(source => !source.url)) {
+      toast.error('Please enter at least one source URL and save settings first');
       return;
     }
     
@@ -132,19 +161,48 @@ const AutoUpdate = () => {
       </div>
       
       <div className="space-y-4 rounded-md border border-gray-200 p-4">
-        <div>
-          <label htmlFor="sourceUrl" className="mb-1 block text-sm font-medium text-gray-700">
-            Source URL
-          </label>
-          <Input
-            id="sourceUrl"
-            value={settings.sourceUrl}
-            onChange={handleUrlChange}
-            placeholder="https://example.com/user-agents.json"
-            disabled={!settings.enabled}
-          />
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <label className="block text-sm font-medium text-gray-700">
+              Source URLs
+            </label>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              onClick={handleAddSource}
+              disabled={!settings.enabled}
+              className="flex items-center text-sm"
+            >
+              <Plus className="mr-1 h-4 w-4" />
+              Add Source
+            </Button>
+          </div>
+          
+          {settings.sources.map((source, index) => (
+            <div key={source.id} className="flex gap-2 items-center">
+              <Input
+                value={source.url}
+                onChange={(e) => handleSourceChange(source.id, e.target.value)}
+                placeholder={`Source URL ${index + 1}`}
+                disabled={!settings.enabled}
+                className="flex-1"
+              />
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                onClick={() => handleRemoveSource(source.id)}
+                disabled={!settings.enabled || settings.sources.length === 1}
+                className="h-10 w-10 shrink-0"
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+          ))}
+          
           <p className="mt-1 text-xs text-gray-500">
-            Enter the URL of the website to extract user agents from
+            Enter the URLs of websites to extract user agents from
           </p>
         </div>
         
@@ -263,11 +321,10 @@ const AutoUpdate = () => {
               </div>
             </div>
             <Button 
-              variant="outline"
               onClick={handleRunNow}
-              disabled={!settings.enabled || !settings.sourceUrl}
+              disabled={!settings.enabled || settings.sources.every(s => !s.url)}
             >
-              Run Now
+              Update Now
             </Button>
           </div>
         </div>
