@@ -172,7 +172,7 @@ const ContentEditor = () => {
                 />
               </div>
               
-              <div className="hidden">
+              <div>
                 <label htmlFor="readTime" className="mb-1 block text-sm font-medium text-gray-700">
                   Read Time
                 </label>

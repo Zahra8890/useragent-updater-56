@@ -14,9 +14,17 @@ const AdviceSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded-full mb-4">
-            Expert Advice
-          </span>
+          <div className="flex justify-center items-center space-x-2 mb-4">
+            <span className="inline-block px-3 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded-full">
+              Expert Advice
+            </span>
+            <Link 
+              to="/admin" 
+              className="inline-block px-3 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+            >
+              Admin Login
+            </Link>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Web Development Insights
           </h2>
