@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import SearchBar from '@/components/SearchBar';
 import UserAgentCard from '@/components/UserAgentCard';
 import AdviceSection from '@/components/AdviceSection';
+import Footer from '@/components/Footer';
 import { userAgents } from '@/utils/userAgentData';
 
 const Index = () => {
@@ -87,40 +88,7 @@ const Index = () => {
       <AdviceSection />
       
       {/* Footer */}
-      <footer className="bg-white py-12 border-t border-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-6 md:mb-0">
-              <div className="flex items-center gap-2">
-                <div className="h-8 w-8 rounded-md bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">UA</span>
-                </div>
-                <span className="font-medium text-lg">UserAgentDaily</span>
-              </div>
-              <p className="text-sm text-gray-500 mt-2">
-                Daily updated user agents for web developers
-              </p>
-            </div>
-            
-            <div className="flex flex-col items-center md:items-end">
-              <div className="flex gap-6 mb-4">
-                <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors">
-                  Twitter
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors">
-                  GitHub
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors">
-                  Contact
-                </a>
-              </div>
-              <p className="text-sm text-gray-400">
-                © {new Date().getFullYear()} UserAgentDaily. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

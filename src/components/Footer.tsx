@@ -42,7 +42,7 @@ const Footer = () => {
               <div className="h-8 w-8 rounded-md bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">UA</span>
               </div>
-              <span className="font-medium text-lg">UserAgentDaily</span>
+              <span className="font-medium text-lg">UserAgents.Pro</span>
             </Link>
             <p className="mt-2 text-sm text-gray-600 max-w-md">
               The comprehensive resource for web developers to understand and work with user agent strings.
@@ -64,7 +64,7 @@ const Footer = () => {
         
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-500 text-sm">
-            © {new Date().getFullYear()} UserAgentDaily. All rights reserved.
+            © {new Date().getFullYear()} UserAgents.Pro. All rights reserved.
           </p>
         </div>
       </div>

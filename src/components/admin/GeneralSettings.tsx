@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -22,7 +21,7 @@ interface SiteSettings {
 
 const GeneralSettings = () => {
   const [settings, setSettings] = useState<SiteSettings>({
-    siteName: 'User Agent Database',
+    siteName: 'UserAgents.Pro',
     siteDescription: 'Daily updated user agents for web development',
     adminUsername: 'admin',
     adminEmail: '',
@@ -35,7 +34,6 @@ const GeneralSettings = () => {
   });
   
   useEffect(() => {
-    // Load settings from localStorage if they exist
     const savedSettings = localStorage.getItem('siteSettings');
     if (savedSettings) {
       try {
@@ -82,7 +80,6 @@ const GeneralSettings = () => {
   const handleGeneralSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Save general settings to localStorage
     const savedSettings = {
       siteName: settings.siteName,
       siteDescription: settings.siteDescription,
@@ -100,14 +97,12 @@ const GeneralSettings = () => {
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate current password
     const authData = localStorage.getItem('adminAuth');
     if (!authData) {
       toast.error('Authentication data not found');
       return;
     }
     
-    // Validate new password
     if (settings.newPassword !== settings.confirmPassword) {
       toast.error('New passwords do not match');
       return;
@@ -118,11 +113,8 @@ const GeneralSettings = () => {
       return;
     }
     
-    // In a real app, this would update backend authentication
-    // For this demo, we'll just pretend the password was updated
     toast.success('Password updated successfully');
     
-    // Reset password fields
     setSettings(prev => ({
       ...prev,
       currentPassword: '',
@@ -343,3 +335,4 @@ const GeneralSettings = () => {
 };
 
 export default GeneralSettings;
+

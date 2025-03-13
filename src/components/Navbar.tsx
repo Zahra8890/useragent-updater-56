@@ -63,7 +63,7 @@ const Navbar = () => {
           <div className="h-8 w-8 rounded-md bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
             <span className="text-white font-bold text-sm">UA</span>
           </div>
-          <span className="font-medium text-lg">UserAgentDaily</span>
+          <span className="font-medium text-lg">UserAgents.Pro</span>
         </Link>
         
         <nav className="hidden md:flex space-x-1">
