@@ -8,8 +8,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
+import usePageTitle from '@/hooks/usePageTitle';
 
 const Contact = () => {
+  usePageTitle('Contact Us');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -128,7 +130,7 @@ const Contact = () => {
               <div className="bg-gray-50 rounded-lg p-6 space-y-6">
                 <div>
                   <h3 className="font-medium text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600">info@useragentdaily.com</p>
+                  <p className="text-gray-600">admin@useragnts.pro</p>
                 </div>
                 
                 <div>

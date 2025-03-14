@@ -2,8 +2,11 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import usePageTitle from '@/hooks/usePageTitle';
 
 const About = () => {
+  usePageTitle('About Us');
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -19,7 +22,7 @@ const About = () => {
           
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-4">
-              UserAgentDaily is dedicated to providing comprehensive information about user agents, 
+              UserAgents.Pro is dedicated to providing comprehensive information about user agents, 
               helping web developers understand and work with browser fingerprinting data.
             </p>
             
@@ -39,7 +42,7 @@ const About = () => {
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Our Team</h2>
             <p className="text-gray-700 mb-4">
-              UserAgentDaily is maintained by a team of experienced web developers, browser compatibility 
+              UserAgents.Pro is maintained by a team of experienced web developers, browser compatibility 
               experts, and web standards advocates who are passionate about improving the web development 
               experience.
             </p>

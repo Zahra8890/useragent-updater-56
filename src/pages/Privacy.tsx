@@ -2,8 +2,11 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import usePageTitle from '@/hooks/usePageTitle';
 
 const Privacy = () => {
+  usePageTitle('Privacy Policy');
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -24,7 +27,7 @@ const Privacy = () => {
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Introduction</h2>
             <p className="mb-4">
-              At UserAgentDaily, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
+              At UserAgents.Pro, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
             </p>
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Information We Collect</h2>
@@ -63,7 +66,7 @@ const Privacy = () => {
               If you have any questions about this privacy policy or our privacy practices, please contact us at:
             </p>
             <p className="mb-4">
-              Email: privacy@useragentdaily.com<br />
+              Email: admin@useragnts.pro<br />
               Address: 123 Web Developer Way, San Francisco, CA 94107, United States
             </p>
           </div>
