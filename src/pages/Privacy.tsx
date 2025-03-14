@@ -66,7 +66,7 @@ const Privacy = () => {
               If you have any questions about this privacy policy or our privacy practices, please contact us at:
             </p>
             <p className="mb-4">
-              Email: admin@useragnts.pro<br />
+              Email: admin@useragents.pro<br />
               Address: 123 Web Developer Way, San Francisco, CA 94107, United States
             </p>
           </div>

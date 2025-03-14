@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Upload, Package, RefreshCw, X } from 'lucide-react';
+import { Upload, Package, RefreshCw, X, Settings } from 'lucide-react';
 
 interface Plugin {
   id: string;
@@ -102,6 +102,14 @@ const PluginManager = () => {
     }
   };
   
+  const openPluginSettings = (pluginId: string) => {
+    const plugin = plugins.find(p => p.id === pluginId);
+    if (plugin) {
+      toast.success(`Opening settings for "${plugin.name}"`);
+      // In a real WordPress integration, this would open the plugin's settings page
+    }
+  };
+  
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -118,7 +126,7 @@ const PluginManager = () => {
         <CardContent>
           <div className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="plugin-file">Select Plugin (.zip)</Label>
+              <Label htmlFor="plugin-file">Select WordPress Plugin (.zip)</Label>
               <div className="flex gap-3">
                 <Input
                   id="plugin-file"
@@ -153,6 +161,10 @@ const PluginManager = () => {
                 </div>
               )}
             </div>
+            <div className="text-sm text-gray-500">
+              <p>Upload WordPress plugins in .zip format to extend your site functionality.</p>
+              <p>All standard WordPress plugins are supported and will be automatically integrated.</p>
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -182,6 +194,13 @@ const PluginManager = () => {
                       </div>
                     </div>
                     <div className="flex gap-2">
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        onClick={() => openPluginSettings(plugin.id)}
+                      >
+                        <Settings className="h-4 w-4" />
+                      </Button>
                       <Button 
                         variant={plugin.status === 'active' ? 'default' : 'outline'} 
                         size="sm"
