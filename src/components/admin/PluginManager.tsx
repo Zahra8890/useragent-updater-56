@@ -131,7 +131,7 @@ const PluginManager = () => {
               <div className="mb-4 md:mb-0">
                 <div className="mb-1 flex items-center gap-2">
                   <h3 className="font-medium">{plugin.name}</h3>
-                  <Badge variant={plugin.status === 'active' ? "success" : "secondary"}>
+                  <Badge variant={plugin.status === 'active' ? "default" : "secondary"} className={plugin.status === 'active' ? "bg-green-100 text-green-800" : ""}>
                     {plugin.status === 'active' ? 
                       <Check className="mr-1 h-3 w-3" /> : 
                       <X className="mr-1 h-3 w-3" />

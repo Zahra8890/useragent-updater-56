@@ -220,7 +220,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <!-- Fix for PluginManager TypeScript error -->
-  <!-- Let's disable any sitemap options in the admin panel -->
 </urlset>
