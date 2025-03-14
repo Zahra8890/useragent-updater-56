@@ -76,20 +76,38 @@ const AdviceSection = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Link
-            to="/advice"
-            className={cn(
-              "inline-flex items-center px-6 py-3 rounded-full",
-              "bg-blue-50 text-blue-700 hover:bg-blue-100",
-              "font-medium transition-all duration-300"
-            )}
-          >
-            View all articles
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </Link>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <Link
+              to="/advice"
+              className={cn(
+                "inline-flex items-center px-6 py-3 rounded-full",
+                "bg-blue-50 text-blue-700 hover:bg-blue-100",
+                "font-medium transition-all duration-300"
+              )}
+            >
+              View all articles
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </Link>
+            
+            <Link
+              to="/admin"
+              className={cn(
+                "inline-flex items-center px-6 py-3 rounded-full",
+                "bg-gray-50 text-gray-700 hover:bg-gray-100",
+                "font-medium transition-all duration-300"
+              )}
+            >
+              Admin Access
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                <polyline points="10 17 15 12 10 7" />
+                <line x1="15" y1="12" x2="3" y2="12" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

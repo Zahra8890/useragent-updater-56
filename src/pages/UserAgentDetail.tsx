@@ -1,10 +1,10 @@
-
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import Navbar from '@/components/Navbar';
 import { UserAgent, userAgents } from '@/utils/userAgentData';
+import Footer from '@/components/Footer';
 
 const UserAgentDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -14,6 +14,16 @@ const UserAgentDetail = () => {
   useEffect(() => {
     const agent = userAgents.find(ua => ua.id === id);
     setUserAgent(agent || null);
+    
+    if (agent) {
+      document.title = `${agent.name} | UserAgents.Pro`;
+    } else {
+      document.title = 'User Agent Not Found | UserAgents.Pro';
+    }
+    
+    return () => {
+      document.title = 'UserAgents.Pro';
+    };
   }, [id]);
   
   const copyToClipboard = () => {
@@ -168,6 +178,8 @@ const UserAgentDetail = () => {
           </div>
         </motion.div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import Navbar from '@/components/Navbar';
@@ -11,6 +11,11 @@ import { userAgents } from '@/utils/userAgentData';
 
 const Index = () => {
   const [searchResults, setSearchResults] = useState(userAgents.slice(0, 6));
+  
+  useEffect(() => {
+    // Set the document title for the main page
+    document.title = 'UserAgents.Pro | Latest User Agent Strings';
+  }, []);
   
   const handleSearch = (query: string) => {
     if (!query.trim()) {
