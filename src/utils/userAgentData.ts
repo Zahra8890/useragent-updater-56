@@ -1,3 +1,4 @@
+
 export interface UserAgent {
   id: string;
   name: string;
@@ -12,101 +13,356 @@ export interface UserAgent {
 }
 
 export const userAgents: UserAgent[] = [
+  // Desktop Browsers (Windows)
   {
     id: '1',
-    name: 'Chrome 122 (Windows)',
-    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    name: 'Chrome 135 (Windows)',
+    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
     browser: 'Chrome',
     os: 'Windows',
     device: 'Desktop',
-    lastUpdated: '2023-05-15',
-    popularity: 28.4,
+    lastUpdated: '2025-03-15',
+    popularity: 24.8,
     category: 'desktop',
-    description: 'The latest Chrome browser version for Windows desktop computers. This user agent is commonly seen in website analytics and represents a significant portion of web traffic.'
+    description: 'Chrome 135 on Windows 10/11 desktop computers. This represents the standard browsing experience for most Windows users in 2025.'
   },
   {
     id: '2',
-    name: 'Safari 16 (iOS)',
-    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1',
-    browser: 'Safari',
-    os: 'iOS',
-    device: 'Mobile',
-    lastUpdated: '2023-05-14',
-    popularity: 22.1,
-    category: 'mobile',
-    description: 'The Safari browser on iOS 16 devices. This user agent is sent by iPhones running the iOS 16 operating system and is one of the most common mobile user agents.'
-  },
-  {
-    id: '3',
-    name: 'Firefox 113 (macOS)',
-    value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:113.0) Gecko/20100101 Firefox/113.0',
-    browser: 'Firefox',
-    os: 'macOS',
-    device: 'Desktop',
-    lastUpdated: '2023-05-16',
-    popularity: 4.3,
-    category: 'desktop',
-    description: 'Firefox browser version 113 running on macOS Catalina (10.15). Firefox is known for its privacy features and rendering capabilities.'
-  },
-  {
-    id: '4',
-    name: 'Edge 113 (Windows)',
-    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.42',
+    name: 'Edge 135 (Windows)',
+    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.2357.81',
     browser: 'Edge',
     os: 'Windows',
     device: 'Desktop',
-    lastUpdated: '2023-05-12',
-    popularity: 5.2,
+    lastUpdated: '2025-03-12',
+    popularity: 8.7,
     category: 'desktop',
-    description: 'Microsoft Edge browser based on Chromium. This version runs on Windows 10 and uses the Blink rendering engine.'
+    description: 'Microsoft Edge 135 on Windows. The default browser on Windows systems, featuring enhanced integration with Microsoft services and AI assistants.'
   },
+  {
+    id: '3',
+    name: 'Firefox 130 (Windows)',
+    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0',
+    browser: 'Firefox',
+    os: 'Windows',
+    device: 'Desktop',
+    lastUpdated: '2025-02-28',
+    popularity: 5.3,
+    category: 'desktop',
+    description: 'Firefox 130 on Windows systems. Known for its privacy features and independent rendering engine, Firefox maintains a dedicated user base in 2025.'
+  },
+  {
+    id: '4',
+    name: 'Opera 111 (Windows)',
+    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/111.0.0.0',
+    browser: 'Opera',
+    os: 'Windows',
+    device: 'Desktop',
+    lastUpdated: '2025-03-05',
+    popularity: 2.1,
+    category: 'desktop',
+    description: 'Opera 111 on Windows desktop. Features built-in VPN and optimized performance for multimedia content consumption.'
+  },
+  
+  // Desktop Browsers (macOS)
   {
     id: '5',
-    name: 'Chrome 113 (Android)',
-    value: 'Mozilla/5.0 (Linux; Android 13; SM-S908B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Safari/537.36',
-    browser: 'Chrome',
-    os: 'Android',
-    device: 'Mobile',
-    lastUpdated: '2023-05-15',
-    popularity: 18.7,
-    category: 'mobile',
-    description: 'Chrome browser on Android 13 devices. This user agent is from a Samsung Galaxy S22 Ultra running the latest Chrome version.'
-  },
-  {
-    id: '6',
-    name: 'Safari 16 (macOS)',
-    value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15',
+    name: 'Safari 19 (macOS)',
+    value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.1 Safari/625.2.7',
     browser: 'Safari',
     os: 'macOS',
     device: 'Desktop',
-    lastUpdated: '2023-05-10',
-    popularity: 7.8,
+    lastUpdated: '2025-02-18',
+    popularity: 7.9,
     category: 'desktop',
-    description: 'Safari 16 on macOS. Safari is the default browser on Apple devices and is known for its performance and battery efficiency.'
+    description: 'Safari 19 on macOS 14.5 (Sequoia). Optimized for Apple hardware with industry-leading power efficiency and privacy features.'
+  },
+  {
+    id: '6',
+    name: 'Chrome 135 (macOS)',
+    value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+    browser: 'Chrome',
+    os: 'macOS',
+    device: 'Desktop',
+    lastUpdated: '2025-03-15',
+    popularity: 6.2,
+    category: 'desktop',
+    description: 'Chrome 135 on macOS 14.5. Features enhanced integration with Google services and support for the latest web standards.'
   },
   {
     id: '7',
-    name: 'Chrome 113 (iPad)',
-    value: 'Mozilla/5.0 (iPad; CPU OS 16_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/113.0.5672.109 Mobile/15E148 Safari/604.1',
-    browser: 'Chrome',
-    os: 'iOS',
-    device: 'Tablet',
-    lastUpdated: '2023-05-16',
-    popularity: 2.1,
-    category: 'tablet',
-    description: 'Chrome browser running on an iPad with iOS 16. This shows Chrome installed on an iPad rather than the default Safari browser.'
+    name: 'Firefox 130 (macOS ARM)',
+    value: 'Mozilla/5.0 (Macintosh; Apple Silicon Mac OS X 14_5_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/19.1 Firefox/130.0',
+    browser: 'Firefox',
+    os: 'macOS',
+    device: 'Desktop',
+    lastUpdated: '2025-02-28',
+    popularity: 1.8,
+    category: 'desktop',
+    description: 'Firefox 130 optimized for Apple Silicon Macs. Features native ARM performance with enhanced battery life and rendering capabilities.'
   },
   {
     id: '8',
-    name: 'Googlebot (Web Crawler)',
-    value: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+    name: 'Arc 3.2 (macOS)',
+    value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/625.2.7 (KHTML, like Gecko) Arc/3.2.5 Safari/625.2.7',
+    browser: 'Arc',
+    os: 'macOS',
+    device: 'Desktop',
+    lastUpdated: '2025-03-01',
+    popularity: 3.2,
+    category: 'desktop',
+    description: 'Arc 3.2 browser on macOS. A modern, privacy-focused browser with a reimagined user interface that has gained significant popularity since 2023.'
+  },
+  
+  // Desktop Browsers (Linux)
+  {
+    id: '9',
+    name: 'Chrome 135 (Linux)',
+    value: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+    browser: 'Chrome',
+    os: 'Linux',
+    device: 'Desktop',
+    lastUpdated: '2025-03-15',
+    popularity: 2.3,
+    category: 'desktop',
+    description: 'Chrome 135 running on various Linux distributions. Preferred by developers and technical users who value open-source software.'
+  },
+  {
+    id: '10',
+    name: 'Firefox 130 (Linux)',
+    value: 'Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0',
+    browser: 'Firefox',
+    os: 'Linux',
+    device: 'Desktop',
+    lastUpdated: '2025-02-28',
+    popularity: 1.9,
+    category: 'desktop',
+    description: 'Firefox 130 on Linux. Popular among privacy-conscious users and those who prefer open-source software ecosystems.'
+  },
+  
+  // Mobile Browsers (iOS)
+  {
+    id: '11',
+    name: 'Safari 19 (iOS 18)',
+    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Safari',
+    os: 'iOS',
+    device: 'Mobile',
+    lastUpdated: '2025-03-10',
+    popularity: 18.6,
+    category: 'mobile',
+    description: 'Safari 19 on iOS 18.4. The default browser on iPhone with Apple Intelligence integration and enhanced privacy features.'
+  },
+  {
+    id: '12',
+    name: 'Chrome 135 (iOS)',
+    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) CriOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Chrome',
+    os: 'iOS',
+    device: 'Mobile',
+    lastUpdated: '2025-03-15',
+    popularity: 6.7,
+    category: 'mobile',
+    description: 'Chrome 135 on iOS 18.4. Uses WebKit rendering engine as required by Apple guidelines but offers Google account synchronization.'
+  },
+  {
+    id: '13',
+    name: 'Firefox 130 (iOS)',
+    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) FxiOS/130.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Firefox',
+    os: 'iOS',
+    device: 'Mobile',
+    lastUpdated: '2025-02-28',
+    popularity: 1.2,
+    category: 'mobile',
+    description: 'Firefox 130 on iOS. Like all iOS browsers, it uses WebKit rendering engine while providing Firefox account sync and privacy features.'
+  },
+  {
+    id: '14',
+    name: 'Edge 135 (iOS)',
+    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) EdgiOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Edge',
+    os: 'iOS',
+    device: 'Mobile',
+    lastUpdated: '2025-03-12',
+    popularity: 0.9,
+    category: 'mobile',
+    description: 'Microsoft Edge 135 on iOS 18. Features Microsoft account integration and AI assistant features, using the WebKit rendering engine.'
+  },
+  
+  // Mobile Browsers (Android)
+  {
+    id: '15',
+    name: 'Chrome 135 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36',
+    browser: 'Chrome',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-03-15',
+    popularity: 20.3,
+    category: 'mobile',
+    description: 'Chrome 135 on Android 16. The most popular mobile browser globally in 2025, featuring Google AI integration and enhanced performance.'
+  },
+  {
+    id: '16',
+    name: 'Samsung Internet 25 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/25.0 Chrome/135.0.0.0 Mobile Safari/537.36',
+    browser: 'Samsung Internet',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-03-08',
+    popularity: 5.4,
+    category: 'mobile',
+    description: 'Samsung Internet 25 on Android 16. Default browser on Samsung devices with optimized performance for Samsung hardware and Knox security features.'
+  },
+  {
+    id: '17',
+    name: 'Edge 135 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36 EdgA/135.0.0.0',
+    browser: 'Edge',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-03-12',
+    popularity: 1.8,
+    category: 'mobile',
+    description: 'Microsoft Edge 135 on Android 16. Features advanced integration with Microsoft services and AI assistants.'
+  },
+  {
+    id: '18',
+    name: 'Firefox 130 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) Gecko/130.0 Firefox/130.0',
+    browser: 'Firefox',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-02-28',
+    popularity: 1.5,
+    category: 'mobile',
+    description: 'Firefox 130 on Android 16. Uses the Gecko rendering engine and offers enhanced privacy features with tracking protection.'
+  },
+  
+  // Tablet Browsers (iOS)
+  {
+    id: '19',
+    name: 'Safari 19 (iPadOS)',
+    value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Safari',
+    os: 'iPadOS',
+    device: 'Tablet',
+    lastUpdated: '2025-03-10',
+    popularity: 6.2,
+    category: 'tablet',
+    description: 'Safari 19 on iPadOS 18.4. Features desktop-class browsing experience with support for web apps and enhanced multitasking.'
+  },
+  {
+    id: '20',
+    name: 'Chrome 135 (iPadOS)',
+    value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) CriOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Chrome',
+    os: 'iPadOS',
+    device: 'Tablet',
+    lastUpdated: '2025-03-15',
+    popularity: 1.9,
+    category: 'tablet',
+    description: 'Chrome 135 on iPadOS 18.4. Uses WebKit rendering engine while offering Google account synchronization and services integration.'
+  },
+  {
+    id: '21',
+    name: 'Firefox 130 (iPadOS)',
+    value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) FxiOS/130.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Firefox',
+    os: 'iPadOS',
+    device: 'Tablet',
+    lastUpdated: '2025-02-28',
+    popularity: 0.7,
+    category: 'tablet',
+    description: 'Firefox 130 on iPadOS 18.4. Features Firefox account synchronization with enhanced privacy controls, limited by Apple\'s WebKit requirement.'
+  },
+  {
+    id: '22',
+    name: 'Edge 135 (iPadOS)',
+    value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) EdgiOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Edge',
+    os: 'iPadOS',
+    device: 'Tablet',
+    lastUpdated: '2025-03-12',
+    popularity: 0.5,
+    category: 'tablet',
+    description: 'Microsoft Edge 135 on iPadOS 18.4. Optimized for iPad with Microsoft 365 integration and AI-powered features.'
+  },
+  
+  // Tablet Browsers (Android)
+  {
+    id: '23',
+    name: 'Chrome 135 (Android Tablet)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+    browser: 'Chrome',
+    os: 'Android',
+    device: 'Tablet',
+    lastUpdated: '2025-03-15',
+    popularity: 3.1,
+    category: 'tablet',
+    description: 'Chrome 135 on Android 16 tablets. Features tablet-optimized UI with enhanced productivity tools and multitasking capabilities.'
+  },
+  {
+    id: '24',
+    name: 'Samsung Internet 25 (Android Tablet)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/25.0 Chrome/135.0.0.0 Safari/537.36',
+    browser: 'Samsung Internet',
+    os: 'Android',
+    device: 'Tablet',
+    lastUpdated: '2025-03-08',
+    popularity: 1.2,
+    category: 'tablet',
+    description: 'Samsung Internet 25 on Samsung tablets running Android 16. Optimized for S-Pen integration and Samsung\'s ecosystem.'
+  },
+  
+  // Web Crawlers and Bots
+  {
+    id: '25',
+    name: 'Googlebot (2025)',
+    value: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.5; +http://www.google.com/bot.html) Chrome/135.0.0.0 Safari/537.36',
     browser: 'Googlebot',
     os: 'N/A',
     device: 'Bot',
-    lastUpdated: '2023-05-01',
-    popularity: 1.2,
+    lastUpdated: '2025-01-15',
+    popularity: 2.8,
     category: 'bot',
-    description: 'Google\'s web crawler that indexes content for the Google search engine. Identifying this user agent is important for SEO optimization.'
+    description: 'Google\'s web crawler that indexes content for the Google search engine. 2025 version with enhanced JavaScript rendering capabilities.'
+  },
+  {
+    id: '26',
+    name: 'Bingbot (2025)',
+    value: 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+    browser: 'Bingbot',
+    os: 'N/A',
+    device: 'Bot',
+    lastUpdated: '2025-02-10',
+    popularity: 0.9,
+    category: 'bot',
+    description: 'Microsoft Bing\'s web crawler that indexes content for the Bing search engine and Microsoft\'s AI services.'
+  },
+  {
+    id: '27',
+    name: 'DuckDuckGo Bot (2025)',
+    value: 'DuckDuckBot/1.2; (+http://duckduckgo.com/duckduckbot.html)',
+    browser: 'DuckDuckBot',
+    os: 'N/A',
+    device: 'Bot',
+    lastUpdated: '2025-01-30',
+    popularity: 0.4,
+    category: 'bot',
+    description: 'Web crawler for the privacy-focused search engine DuckDuckGo, which has gained market share in the privacy-conscious segment.'
+  },
+  {
+    id: '28',
+    name: 'ChatGPT Web Crawler',
+    value: 'ChatGPT-User/1.0 (+https://openai.com/crawler)',
+    browser: 'ChatGPT',
+    os: 'N/A',
+    device: 'Bot',
+    lastUpdated: '2025-03-01',
+    popularity: 1.1,
+    category: 'bot',
+    description: 'OpenAI\'s web crawler that indexes content to provide up-to-date information to AI models and chatbots.'
   }
 ];
 

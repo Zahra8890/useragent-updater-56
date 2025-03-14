@@ -12,6 +12,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://useragents.pro/user-agents/desktop</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agents/mobile</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agents/tablet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agents/bot</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://useragents.pro/advice</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
