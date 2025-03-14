@@ -1,226 +1,173 @@
 
-import { useState } from 'react';
-import { toast } from 'sonner';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Upload, Package, RefreshCw, X, Settings } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Switch } from '@/components/ui/switch';
+import { toast } from 'sonner';
+import { Download, Check, X, AlertCircle } from 'lucide-react';
+
+type PluginStatus = "active" | "inactive";
 
 interface Plugin {
   id: string;
   name: string;
   description: string;
   version: string;
-  status: 'active' | 'inactive';
+  status: PluginStatus;
 }
 
 const PluginManager = () => {
-  const [plugins, setPlugins] = useState<Plugin[]>(() => {
-    const savedPlugins = localStorage.getItem('wordpressPlugins');
-    return savedPlugins ? JSON.parse(savedPlugins) : [];
-  });
+  const [plugins, setPlugins] = useState<Plugin[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
   
-  const [uploadingFile, setUploadingFile] = useState<File | null>(null);
-  const [isUploading, setIsUploading] = useState(false);
+  useEffect(() => {
+    // Simulate loading plugins
+    const timer = setTimeout(() => {
+      const demoPlugins: Plugin[] = [
+        {
+          id: 'social-share',
+          name: 'Social Share Buttons',
+          description: 'Adds customizable social sharing buttons to your user agent pages',
+          version: '1.2.0',
+          status: 'active'
+        },
+        {
+          id: 'advanced-analytics',
+          name: 'Advanced Analytics',
+          description: 'Enhanced analytics and tracking for user agent usage',
+          version: '2.1.3',
+          status: 'active'
+        },
+        {
+          id: 'device-icons',
+          name: 'Device Icons Pack',
+          description: 'Adds high-quality device and browser icons to user agents',
+          version: '1.0.5',
+          status: 'inactive'
+        },
+        {
+          id: 'comparison-tool',
+          name: 'User Agent Comparison',
+          description: 'Allows visitors to compare multiple user agents side by side',
+          version: '0.9.1',
+          status: 'inactive'
+        }
+      ];
+      
+      setPlugins(demoPlugins);
+      setIsLoading(false);
+    }, 800);
+    
+    return () => clearTimeout(timer);
+  }, []);
   
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      if (file.name.endsWith('.zip')) {
-        setUploadingFile(file);
-      } else {
-        toast.error('Please select a valid WordPress plugin (.zip file)');
-      }
-    }
-  };
-  
-  const handleUpload = () => {
-    if (!uploadingFile) {
-      toast.error('Please select a plugin file first');
-      return;
-    }
+  const togglePlugin = (id: string) => {
+    setPlugins(prev => prev.map(plugin => 
+      plugin.id === id ? 
+        { ...plugin, status: plugin.status === 'active' ? 'inactive' : 'active' } : 
+        plugin
+    ));
     
-    setIsUploading(true);
-    
-    // Simulate upload and installation process
-    setTimeout(() => {
-      // Generate a unique ID for the plugin
-      const pluginId = Date.now().toString();
-      
-      // Extract plugin name from filename (removing .zip extension)
-      const pluginName = uploadingFile.name.replace('.zip', '');
-      
-      const newPlugin: Plugin = {
-        id: pluginId,
-        name: pluginName,
-        description: 'Custom WordPress plugin',
-        version: '1.0.0',
-        status: 'inactive'
-      };
-      
-      const updatedPlugins = [...plugins, newPlugin];
-      setPlugins(updatedPlugins);
-      localStorage.setItem('wordpressPlugins', JSON.stringify(updatedPlugins));
-      
-      setUploadingFile(null);
-      setIsUploading(false);
-      toast.success(`Plugin "${pluginName}" installed successfully!`);
-    }, 2000);
-  };
-  
-  const togglePluginStatus = (pluginId: string) => {
-    const updatedPlugins = plugins.map(plugin => {
-      if (plugin.id === pluginId) {
-        return {
-          ...plugin,
-          status: plugin.status === 'active' ? 'inactive' : 'active'
-        };
-      }
-      return plugin;
-    });
-    
-    setPlugins(updatedPlugins);
-    localStorage.setItem('wordpressPlugins', JSON.stringify(updatedPlugins));
-    
-    const plugin = updatedPlugins.find(p => p.id === pluginId);
+    const plugin = plugins.find(p => p.id === id);
     if (plugin) {
-      const action = plugin.status === 'active' ? 'activated' : 'deactivated';
-      toast.success(`Plugin "${plugin.name}" ${action} successfully!`);
+      toast.success(`${plugin.name} ${plugin.status === 'active' ? 'deactivated' : 'activated'}`);
     }
   };
   
-  const deletePlugin = (pluginId: string) => {
-    const plugin = plugins.find(p => p.id === pluginId);
-    const updatedPlugins = plugins.filter(plugin => plugin.id !== pluginId);
-    
-    setPlugins(updatedPlugins);
-    localStorage.setItem('wordpressPlugins', JSON.stringify(updatedPlugins));
-    
-    if (plugin) {
-      toast.success(`Plugin "${plugin.name}" removed successfully!`);
-    }
+  const filteredPlugins = plugins.filter(plugin => 
+    plugin.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    plugin.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  
+  const installPlugin = () => {
+    toast.error('Feature not implemented in this demo');
   };
   
-  const openPluginSettings = (pluginId: string) => {
-    const plugin = plugins.find(p => p.id === pluginId);
-    if (plugin) {
-      toast.success(`Opening settings for "${plugin.name}"`);
-      // In a real WordPress integration, this would open the plugin's settings page
-    }
-  };
+  if (isLoading) {
+    return (
+      <div className="flex h-64 items-center justify-center">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"></div>
+      </div>
+    );
+  }
   
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
+    <div>
+      <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <h2 className="text-xl font-semibold">WordPress Plugin Manager</h2>
-          <p className="text-gray-600">Install and manage WordPress plugins</p>
+          <h2 className="text-xl font-semibold">Plugin Manager</h2>
+          <p className="text-gray-600">Manage and install plugins to extend functionality</p>
         </div>
+        <Button onClick={installPlugin} className="flex items-center gap-2">
+          <Download size={16} />
+          Install Plugin
+        </Button>
       </div>
       
-      <Card>
-        <CardHeader>
-          <CardTitle>Upload New Plugin</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="plugin-file">Select WordPress Plugin (.zip)</Label>
-              <div className="flex gap-3">
-                <Input
-                  id="plugin-file"
-                  type="file"
-                  accept=".zip"
-                  onChange={handleFileChange}
-                  className="flex-1"
-                />
-                <Button 
-                  onClick={handleUpload} 
-                  disabled={!uploadingFile || isUploading}
-                >
-                  {isUploading ? (
-                    <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
-                  ) : (
-                    <Upload className="h-4 w-4 mr-2" />
-                  )}
-                  {isUploading ? 'Installing...' : 'Install'}
-                </Button>
-              </div>
-              {uploadingFile && (
-                <div className="text-sm text-gray-600 flex items-center gap-2">
-                  Selected: {uploadingFile.name}
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="h-6 w-6 p-0"
-                    onClick={() => setUploadingFile(null)}
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
-                </div>
-              )}
-            </div>
-            <div className="text-sm text-gray-500">
-              <p>Upload WordPress plugins in .zip format to extend your site functionality.</p>
-              <p>All standard WordPress plugins are supported and will be automatically integrated.</p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="mb-6">
+        <Input
+          placeholder="Search plugins..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="max-w-md"
+        />
+      </div>
       
       <div className="space-y-4">
-        <h3 className="text-lg font-medium">Installed Plugins</h3>
-        {plugins.length === 0 ? (
-          <p className="text-gray-500 text-center py-8">No plugins installed yet</p>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {plugins.map(plugin => (
-              <Card key={plugin.id}>
-                <CardContent className="pt-6">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h4 className="font-medium">{plugin.name}</h4>
-                      <p className="text-sm text-gray-500">{plugin.description}</p>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className="text-xs text-gray-500">Version {plugin.version}</span>
-                        <span className={`text-xs px-2 py-1 rounded-full ${
-                          plugin.status === 'active' 
-                            ? 'bg-green-100 text-green-800' 
-                            : 'bg-gray-100 text-gray-800'
-                        }`}>
-                          {plugin.status === 'active' ? 'Active' : 'Inactive'}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        onClick={() => openPluginSettings(plugin.id)}
-                      >
-                        <Settings className="h-4 w-4" />
-                      </Button>
-                      <Button 
-                        variant={plugin.status === 'active' ? 'default' : 'outline'} 
-                        size="sm"
-                        onClick={() => togglePluginStatus(plugin.id)}
-                      >
-                        {plugin.status === 'active' ? 'Deactivate' : 'Activate'}
-                      </Button>
-                      <Button 
-                        variant="destructive" 
-                        size="sm"
-                        onClick={() => deletePlugin(plugin.id)}
-                      >
-                        <X className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+        {filteredPlugins.length === 0 ? (
+          <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 text-center">
+            <AlertCircle className="mx-auto mb-4 h-8 w-8 text-gray-400" />
+            <h3 className="mb-1 text-lg font-medium">No plugins found</h3>
+            <p className="text-gray-500">Try adjusting your search or install new plugins</p>
           </div>
+        ) : (
+          filteredPlugins.map(plugin => (
+            <div 
+              key={plugin.id}
+              className="flex flex-col rounded-lg border border-gray-200 bg-white p-4 shadow-sm md:flex-row md:items-center md:justify-between"
+            >
+              <div className="mb-4 md:mb-0">
+                <div className="mb-1 flex items-center gap-2">
+                  <h3 className="font-medium">{plugin.name}</h3>
+                  <Badge variant={plugin.status === 'active' ? "success" : "secondary"}>
+                    {plugin.status === 'active' ? 
+                      <Check className="mr-1 h-3 w-3" /> : 
+                      <X className="mr-1 h-3 w-3" />
+                    }
+                    {plugin.status === 'active' ? 'Active' : 'Inactive'}
+                  </Badge>
+                </div>
+                <p className="text-sm text-gray-600">{plugin.description}</p>
+                <p className="mt-1 text-xs text-gray-500">Version: {plugin.version}</p>
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <div className="flex items-center space-x-2">
+                  <Switch 
+                    checked={plugin.status === 'active'}
+                    onCheckedChange={() => togglePlugin(plugin.id)}
+                    id={`switch-${plugin.id}`}
+                  />
+                  <label 
+                    htmlFor={`switch-${plugin.id}`}
+                    className="text-sm font-medium"
+                  >
+                    {plugin.status === 'active' ? 'Enabled' : 'Disabled'}
+                  </label>
+                </div>
+                
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  onClick={() => toast.error('Feature not implemented in this demo')}
+                >
+                  Settings
+                </Button>
+              </div>
+            </div>
+          ))
         )}
       </div>
     </div>
