@@ -56,87 +56,149 @@
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
-  <!-- User agent detail pages -->
+  
+  <!-- User agent detail pages with proper links -->
   <url>
-    <loc>https://useragents.pro/user-agents/1</loc>
+    <loc>https://useragents.pro/user-agent/1</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/2</loc>
+    <loc>https://useragents.pro/user-agent/2</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/3</loc>
+    <loc>https://useragents.pro/user-agent/3</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/4</loc>
+    <loc>https://useragents.pro/user-agent/4</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/5</loc>
+    <loc>https://useragents.pro/user-agent/5</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/6</loc>
+    <loc>https://useragents.pro/user-agent/6</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/7</loc>
+    <loc>https://useragents.pro/user-agent/7</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/8</loc>
+    <loc>https://useragents.pro/user-agent/8</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/9</loc>
+    <loc>https://useragents.pro/user-agent/9</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/10</loc>
+    <loc>https://useragents.pro/user-agent/10</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/11</loc>
+    <loc>https://useragents.pro/user-agent/11</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/12</loc>
+    <loc>https://useragents.pro/user-agent/12</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/13</loc>
+    <loc>https://useragents.pro/user-agent/13</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/14</loc>
+    <loc>https://useragents.pro/user-agent/14</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/15</loc>
+    <loc>https://useragents.pro/user-agent/15</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://useragents.pro/user-agents/16</loc>
+    <loc>https://useragents.pro/user-agent/16</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/17</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/18</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/19</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/20</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/21</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/22</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/23</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/24</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/25</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/26</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/27</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/user-agent/28</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
   <!-- Advice articles -->
   <url>
     <loc>https://useragents.pro/advice/1</loc>
@@ -160,6 +222,16 @@
   </url>
   <url>
     <loc>https://useragents.pro/advice/5</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/advice/6</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://useragents.pro/advice/7</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
