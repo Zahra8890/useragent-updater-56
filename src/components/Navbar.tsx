@@ -18,6 +18,7 @@ const Navbar = () => {
     { id: '1', title: 'Home', slug: '/', position: 'top' },
     { id: '2', title: 'User Agents', slug: '/user-agents', position: 'top' },
     { id: '3', title: 'Advice', slug: '/advice', position: 'top' },
+    { id: '4', title: 'My Agents', slug: '/my-agents', position: 'top' },
   ]);
   
   useEffect(() => {
@@ -27,6 +28,18 @@ const Navbar = () => {
       const parsedPages = JSON.parse(savedPages);
       // Get only top navigation items
       const topNavItems = parsedPages.filter((page: Page) => page.position === 'top');
+      
+      // Make sure our custom "My Agents" page is included
+      const myAgentsExists = topNavItems.some((item: Page) => item.slug === '/my-agents');
+      if (!myAgentsExists) {
+        topNavItems.push({
+          id: Date.now().toString(),
+          title: 'My Agents',
+          slug: '/my-agents',
+          position: 'top'
+        });
+      }
+      
       if (topNavItems.length > 0) {
         setNavItems(topNavItems.map((page: Page) => ({
           id: page.id,

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
@@ -34,9 +33,10 @@ const PageEditor = () => {
         { id: '1', title: 'Home', slug: '/', content: 'Home page content', position: 'top', isSystem: true },
         { id: '2', title: 'User Agents', slug: '/user-agents', content: 'User Agents page content', position: 'top', isSystem: true },
         { id: '3', title: 'Advice', slug: '/advice', content: 'Advice page content', position: 'top', isSystem: true },
-        { id: '4', title: 'About Us', slug: '/about', content: 'About us page content', position: 'bottom' },
-        { id: '5', title: 'Contact Us', slug: '/contact', content: 'Contact us page content', position: 'bottom' },
-        { id: '6', title: 'Privacy Policy', slug: '/privacy', content: 'Privacy policy content', position: 'bottom' },
+        { id: '4', title: 'My Agents', slug: '/my-agents', content: 'My Agents page content', position: 'top', isSystem: true },
+        { id: '5', title: 'About Us', slug: '/about', content: 'About us page content', position: 'bottom' },
+        { id: '6', title: 'Contact Us', slug: '/contact', content: 'Contact us page content', position: 'bottom' },
+        { id: '7', title: 'Privacy Policy', slug: '/privacy', content: 'Privacy policy content', position: 'bottom' },
       ];
       setPages(defaultPages);
       localStorage.setItem('sitePages', JSON.stringify(defaultPages));

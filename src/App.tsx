@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
+import MyAgents from "./pages/MyAgents";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/user-agents/:category" element={<UserAgents />} />
             <Route path="/advice" element={<Advice />} />
             <Route path="/advice/:id" element={<AdviceDetail />} />
+            <Route path="/my-agents" element={<MyAgents />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
