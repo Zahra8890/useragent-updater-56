@@ -64,10 +64,6 @@ const AdminLogin = ({ onLogin }: AdminLoginProps) => {
               Login
             </Button>
           </form>
-          
-          <div className="mt-4 text-center text-sm text-gray-600">
-            <p>Default login: admin / admin</p>
-          </div>
         </div>
       </motion.div>
     </div>

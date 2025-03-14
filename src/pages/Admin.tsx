@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,7 +8,6 @@ import GeneralSettings from '@/components/admin/GeneralSettings';
 import UserAgentManager from '@/components/admin/UserAgentManager';
 import ContentEditor from '@/components/admin/ContentEditor';
 import CustomCode from '@/components/admin/CustomCode';
-import AutoUpdate from '@/components/admin/AutoUpdate';
 import PageEditor from '@/components/admin/PageEditor';
 import usePageTitle from '@/hooks/usePageTitle';
 
@@ -39,7 +37,7 @@ const Admin = () => {
   
   const handleLogin = (username: string, password: string) => {
     // Basic authentication (in a real app, this would be a backend call)
-    if (username === 'admin' && password === 'admin') {
+    if (username === 'admin' && password === 'Ali@9812') {
       const authData = {
         authenticated: true,
         username: 'admin',
