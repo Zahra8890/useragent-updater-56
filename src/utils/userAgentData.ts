@@ -62,10 +62,46 @@ export const userAgents: UserAgent[] = [
     category: 'desktop',
     description: 'Opera 111 on Windows desktop. Features built-in VPN and optimized performance for multimedia content consumption.'
   },
+  {
+    id: '5',
+    name: 'Brave 135 (Windows)',
+    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Brave/135.0.0.0',
+    browser: 'Brave',
+    os: 'Windows',
+    device: 'Desktop',
+    lastUpdated: '2025-03-15',
+    popularity: 3.5,
+    category: 'desktop',
+    description: 'Brave 135 on Windows. Privacy-focused browser with built-in ad and tracker blocking capabilities and crypto features.'
+  },
+  {
+    id: '6',
+    name: 'Vivaldi 7.5 (Windows)',
+    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Vivaldi/7.5.3030.50',
+    browser: 'Vivaldi',
+    os: 'Windows',
+    device: 'Desktop',
+    lastUpdated: '2025-03-10',
+    popularity: 1.2,
+    category: 'desktop',
+    description: 'Vivaldi 7.5 on Windows. Highly customizable browser with power-user features like tab stacking, built-in notes, and web panels.'
+  },
+  {
+    id: '7',
+    name: 'Tor Browser 13.0 (Windows)',
+    value: 'Mozilla/5.0 (Windows NT 10.0; rv:130.0) Gecko/20100101 Firefox/130.0',
+    browser: 'Tor Browser',
+    os: 'Windows',
+    device: 'Desktop',
+    lastUpdated: '2025-02-20',
+    popularity: 1.0,
+    category: 'desktop',
+    description: 'Tor Browser 13.0 on Windows. Based on Firefox, focused on privacy and anonymity through the Tor network. User agent is deliberately generic to prevent fingerprinting.'
+  },
   
   // Desktop Browsers (macOS)
   {
-    id: '5',
+    id: '8',
     name: 'Safari 19 (macOS)',
     value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.1 Safari/625.2.7',
     browser: 'Safari',
@@ -77,7 +113,7 @@ export const userAgents: UserAgent[] = [
     description: 'Safari 19 on macOS 14.5 (Sequoia). Optimized for Apple hardware with industry-leading power efficiency and privacy features.'
   },
   {
-    id: '6',
+    id: '9',
     name: 'Chrome 135 (macOS)',
     value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
     browser: 'Chrome',
@@ -89,7 +125,7 @@ export const userAgents: UserAgent[] = [
     description: 'Chrome 135 on macOS 14.5. Features enhanced integration with Google services and support for the latest web standards.'
   },
   {
-    id: '7',
+    id: '10',
     name: 'Firefox 130 (macOS ARM)',
     value: 'Mozilla/5.0 (Macintosh; Apple Silicon Mac OS X 14_5_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/19.1 Firefox/130.0',
     browser: 'Firefox',
@@ -101,7 +137,7 @@ export const userAgents: UserAgent[] = [
     description: 'Firefox 130 optimized for Apple Silicon Macs. Features native ARM performance with enhanced battery life and rendering capabilities.'
   },
   {
-    id: '8',
+    id: '11',
     name: 'Arc 3.2 (macOS)',
     value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/625.2.7 (KHTML, like Gecko) Arc/3.2.5 Safari/625.2.7',
     browser: 'Arc',
@@ -112,10 +148,46 @@ export const userAgents: UserAgent[] = [
     category: 'desktop',
     description: 'Arc 3.2 browser on macOS. A modern, privacy-focused browser with a reimagined user interface that has gained significant popularity since 2023.'
   },
+  {
+    id: '12',
+    name: 'Brave 135 (macOS)',
+    value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Brave/135.0.0.0',
+    browser: 'Brave',
+    os: 'macOS',
+    device: 'Desktop',
+    lastUpdated: '2025-03-15',
+    popularity: 2.1,
+    category: 'desktop',
+    description: 'Brave 135 on macOS. Privacy-focused browser with built-in ad and tracker blocking and a crypto wallet for Web3 integration.'
+  },
+  {
+    id: '13',
+    name: 'Orion 2.0 (macOS)',
+    value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.1 Orion/2.0.5 Safari/625.2.7',
+    browser: 'Orion',
+    os: 'macOS',
+    device: 'Desktop',
+    lastUpdated: '2025-03-10',
+    popularity: 0.8,
+    category: 'desktop',
+    description: 'Orion 2.0 on macOS. A newer browser that combines WebKit rendering with support for Chrome and Firefox extensions. Focused on privacy and performance.'
+  },
+  {
+    id: '14',
+    name: 'Opera 111 (macOS)',
+    value: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/111.0.0.0',
+    browser: 'Opera',
+    os: 'macOS',
+    device: 'Desktop',
+    lastUpdated: '2025-03-05',
+    popularity: 0.9,
+    category: 'desktop',
+    description: 'Opera 111 on macOS. Features built-in VPN, AI sidebars, and optimization for multimedia content.'
+  },
   
   // Desktop Browsers (Linux)
   {
-    id: '9',
+    id: '15',
     name: 'Chrome 135 (Linux)',
     value: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
     browser: 'Chrome',
@@ -127,7 +199,7 @@ export const userAgents: UserAgent[] = [
     description: 'Chrome 135 running on various Linux distributions. Preferred by developers and technical users who value open-source software.'
   },
   {
-    id: '10',
+    id: '16',
     name: 'Firefox 130 (Linux)',
     value: 'Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0',
     browser: 'Firefox',
@@ -138,10 +210,70 @@ export const userAgents: UserAgent[] = [
     category: 'desktop',
     description: 'Firefox 130 on Linux. Popular among privacy-conscious users and those who prefer open-source software ecosystems.'
   },
+  {
+    id: '17',
+    name: 'Brave 135 (Linux)',
+    value: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Brave/135.0.0.0',
+    browser: 'Brave',
+    os: 'Linux',
+    device: 'Desktop',
+    lastUpdated: '2025-03-15',
+    popularity: 1.2,
+    category: 'desktop',
+    description: 'Brave 135 on Linux distributions. Popular among privacy-focused Linux users who want Chrome compatibility with enhanced privacy features.'
+  },
+  {
+    id: '18',
+    name: 'Chromium 135 (Linux)',
+    value: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chromium/135.0.0.0 Chrome/135.0.0.0 Safari/537.36',
+    browser: 'Chromium',
+    os: 'Linux',
+    device: 'Desktop',
+    lastUpdated: '2025-03-15',
+    popularity: 1.1,
+    category: 'desktop',
+    description: 'Chromium 135 on Linux. The open-source project that powers Chrome and many other browsers, preferred by users who avoid proprietary components.'
+  },
+  {
+    id: '19',
+    name: 'Opera 111 (Linux)',
+    value: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/111.0.0.0',
+    browser: 'Opera',
+    os: 'Linux',
+    device: 'Desktop',
+    lastUpdated: '2025-03-05',
+    popularity: 0.6,
+    category: 'desktop',
+    description: 'Opera 111 on Linux. Features a customizable interface with built-in tools like VPN and ad blocker for Linux users.'
+  },
+  {
+    id: '20',
+    name: 'Vivaldi 7.5 (Linux)',
+    value: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Vivaldi/7.5.3030.50',
+    browser: 'Vivaldi',
+    os: 'Linux',
+    device: 'Desktop',
+    lastUpdated: '2025-03-10',
+    popularity: 0.8,
+    category: 'desktop',
+    description: 'Vivaldi 7.5 on Linux. Highly customizable browser with extensive keyboard shortcuts and power-user features popular in the Linux community.'
+  },
+  {
+    id: '21',
+    name: 'Tor Browser 13.0 (Linux)',
+    value: 'Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0',
+    browser: 'Tor Browser',
+    os: 'Linux',
+    device: 'Desktop',
+    lastUpdated: '2025-02-20',
+    popularity: 0.7,
+    category: 'desktop',
+    description: 'Tor Browser 13.0 on Linux. Often used on security-focused Linux distributions for maximum privacy and anonymity.'
+  },
   
   // Mobile Browsers (iOS)
   {
-    id: '11',
+    id: '22',
     name: 'Safari 19 (iOS 18)',
     value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.0 Mobile/15E148 Safari/625.2.7',
     browser: 'Safari',
@@ -153,7 +285,7 @@ export const userAgents: UserAgent[] = [
     description: 'Safari 19 on iOS 18.4. The default browser on iPhone with Apple Intelligence integration and enhanced privacy features.'
   },
   {
-    id: '12',
+    id: '23',
     name: 'Chrome 135 (iOS)',
     value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) CriOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
     browser: 'Chrome',
@@ -165,7 +297,7 @@ export const userAgents: UserAgent[] = [
     description: 'Chrome 135 on iOS 18.4. Uses WebKit rendering engine as required by Apple guidelines but offers Google account synchronization.'
   },
   {
-    id: '13',
+    id: '24',
     name: 'Firefox 130 (iOS)',
     value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) FxiOS/130.0 Mobile/15E148 Safari/625.2.7',
     browser: 'Firefox',
@@ -177,7 +309,7 @@ export const userAgents: UserAgent[] = [
     description: 'Firefox 130 on iOS. Like all iOS browsers, it uses WebKit rendering engine while providing Firefox account sync and privacy features.'
   },
   {
-    id: '14',
+    id: '25',
     name: 'Edge 135 (iOS)',
     value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) EdgiOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
     browser: 'Edge',
@@ -188,10 +320,58 @@ export const userAgents: UserAgent[] = [
     category: 'mobile',
     description: 'Microsoft Edge 135 on iOS 18. Features Microsoft account integration and AI assistant features, using the WebKit rendering engine.'
   },
+  {
+    id: '26',
+    name: 'Brave 135 (iOS)',
+    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) BraveIOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Brave',
+    os: 'iOS',
+    device: 'Mobile',
+    lastUpdated: '2025-03-15',
+    popularity: 1.3,
+    category: 'mobile',
+    description: 'Brave 135 on iOS 18.4. Privacy-focused browser with built-in ad blocking and tracking protection for mobile users.'
+  },
+  {
+    id: '27',
+    name: 'Opera Touch 6.0 (iOS)',
+    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) OPiOS/6.0.0.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Opera Touch',
+    os: 'iOS',
+    device: 'Mobile',
+    lastUpdated: '2025-03-05',
+    popularity: 0.5,
+    category: 'mobile',
+    description: 'Opera Touch 6.0 on iOS 18.4. Designed for one-handed use with a floating action button and built-in ad blocking features.'
+  },
+  {
+    id: '28',
+    name: 'DuckDuckGo 15.0 (iOS)',
+    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.0 DuckDuckGo/15 Mobile/15E148 Safari/625.2.7',
+    browser: 'DuckDuckGo',
+    os: 'iOS',
+    device: 'Mobile',
+    lastUpdated: '2025-03-01',
+    popularity: 0.8,
+    category: 'mobile',
+    description: 'DuckDuckGo 15.0 on iOS 18.4. Privacy-focused browser with built-in tracker blocking, encrypted connections, and private search features.'
+  },
+  {
+    id: '29',
+    name: 'Safari 19 (iOS 18 - iPhone 18 Pro)',
+    value: 'Mozilla/5.0 (iPhone18,1; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Safari',
+    os: 'iOS',
+    device: 'Mobile',
+    lastUpdated: '2025-03-10',
+    popularity: 4.2,
+    category: 'mobile',
+    description: 'Safari 19 on the iPhone 18 Pro running iOS 18.4. Takes advantage of the device\'s advanced CPU and GPU for enhanced web performance.'
+  },
   
   // Mobile Browsers (Android)
   {
-    id: '15',
+    id: '30',
     name: 'Chrome 135 (Android)',
     value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36',
     browser: 'Chrome',
@@ -203,7 +383,7 @@ export const userAgents: UserAgent[] = [
     description: 'Chrome 135 on Android 16. The most popular mobile browser globally in 2025, featuring Google AI integration and enhanced performance.'
   },
   {
-    id: '16',
+    id: '31',
     name: 'Samsung Internet 25 (Android)',
     value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/25.0 Chrome/135.0.0.0 Mobile Safari/537.36',
     browser: 'Samsung Internet',
@@ -215,7 +395,7 @@ export const userAgents: UserAgent[] = [
     description: 'Samsung Internet 25 on Android 16. Default browser on Samsung devices with optimized performance for Samsung hardware and Knox security features.'
   },
   {
-    id: '17',
+    id: '32',
     name: 'Edge 135 (Android)',
     value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36 EdgA/135.0.0.0',
     browser: 'Edge',
@@ -227,7 +407,7 @@ export const userAgents: UserAgent[] = [
     description: 'Microsoft Edge 135 on Android 16. Features advanced integration with Microsoft services and AI assistants.'
   },
   {
-    id: '18',
+    id: '33',
     name: 'Firefox 130 (Android)',
     value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) Gecko/130.0 Firefox/130.0',
     browser: 'Firefox',
@@ -238,10 +418,70 @@ export const userAgents: UserAgent[] = [
     category: 'mobile',
     description: 'Firefox 130 on Android 16. Uses the Gecko rendering engine and offers enhanced privacy features with tracking protection.'
   },
+  {
+    id: '34',
+    name: 'Brave 135 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36 Brave/135.0.0.0',
+    browser: 'Brave',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-03-15',
+    popularity: 2.2,
+    category: 'mobile',
+    description: 'Brave 135 on Android 16. Privacy-focused browser with built-in ad blocking and crypto features for mobile users.'
+  },
+  {
+    id: '35',
+    name: 'Opera Mini 35 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36 OPR/35.0.0.0',
+    browser: 'Opera Mini',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-03-05',
+    popularity: 1.3,
+    category: 'mobile',
+    description: 'Opera Mini 35 on Android 16. Data-saving browser with server-side compression, popular in regions with limited bandwidth.'
+  },
+  {
+    id: '36',
+    name: 'UC Browser 17 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.0.0 Mobile Safari/537.36 UCBrowser/17.2.0.1306',
+    browser: 'UC Browser',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-02-15',
+    popularity: 1.9,
+    category: 'mobile',
+    description: 'UC Browser 17 on Android 16. Popular in Asian markets with data compression technology and a feature-rich interface.'
+  },
+  {
+    id: '37',
+    name: 'DuckDuckGo 15.0 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36 DuckDuckGo/15',
+    browser: 'DuckDuckGo',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-03-01',
+    popularity: 0.7,
+    category: 'mobile',
+    description: 'DuckDuckGo 15.0 on Android 16. Privacy-focused browser with built-in App Tracking Protection and one-tap data clearing.'
+  },
+  {
+    id: '38',
+    name: 'Vivaldi 7.5 (Android)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36 Vivaldi/7.5.3030.50',
+    browser: 'Vivaldi',
+    os: 'Android',
+    device: 'Mobile',
+    lastUpdated: '2025-03-10',
+    popularity: 0.5,
+    category: 'mobile',
+    description: 'Vivaldi 7.5 on Android 16. Feature-rich browser with customizable speed dials, tab management, and tracking protection.'
+  },
   
   // Tablet Browsers (iOS)
   {
-    id: '19',
+    id: '39',
     name: 'Safari 19 (iPadOS)',
     value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.0 Mobile/15E148 Safari/625.2.7',
     browser: 'Safari',
@@ -253,7 +493,7 @@ export const userAgents: UserAgent[] = [
     description: 'Safari 19 on iPadOS 18.4. Features desktop-class browsing experience with support for web apps and enhanced multitasking.'
   },
   {
-    id: '20',
+    id: '40',
     name: 'Chrome 135 (iPadOS)',
     value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) CriOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
     browser: 'Chrome',
@@ -265,7 +505,7 @@ export const userAgents: UserAgent[] = [
     description: 'Chrome 135 on iPadOS 18.4. Uses WebKit rendering engine while offering Google account synchronization and services integration.'
   },
   {
-    id: '21',
+    id: '41',
     name: 'Firefox 130 (iPadOS)',
     value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) FxiOS/130.0 Mobile/15E148 Safari/625.2.7',
     browser: 'Firefox',
@@ -277,7 +517,7 @@ export const userAgents: UserAgent[] = [
     description: 'Firefox 130 on iPadOS 18.4. Features Firefox account synchronization with enhanced privacy controls, limited by Apple\'s WebKit requirement.'
   },
   {
-    id: '22',
+    id: '42',
     name: 'Edge 135 (iPadOS)',
     value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) EdgiOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
     browser: 'Edge',
@@ -288,10 +528,46 @@ export const userAgents: UserAgent[] = [
     category: 'tablet',
     description: 'Microsoft Edge 135 on iPadOS 18.4. Optimized for iPad with Microsoft 365 integration and AI-powered features.'
   },
+  {
+    id: '43',
+    name: 'Brave 135 (iPadOS)',
+    value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) BraveIOS/135.0.0.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Brave',
+    os: 'iPadOS',
+    device: 'Tablet',
+    lastUpdated: '2025-03-15',
+    popularity: 0.6,
+    category: 'tablet',
+    description: 'Brave 135 on iPadOS 18.4. Privacy-focused browser with built-in ad and tracker blocking for tablet users.'
+  },
+  {
+    id: '44',
+    name: 'Opera Touch 6.0 (iPadOS)',
+    value: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) OPiOS/6.0.0.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Opera Touch',
+    os: 'iPadOS',
+    device: 'Tablet',
+    lastUpdated: '2025-03-05',
+    popularity: 0.4,
+    category: 'tablet',
+    description: 'Opera Touch 6.0 on iPadOS 18.4. Optimized for tablet experience with quick access to bookmarks and search.'
+  },
+  {
+    id: '45',
+    name: 'Safari 19 (iPadOS - iPad Pro M5)',
+    value: 'Mozilla/5.0 (iPad14,6; CPU OS 18_4 like Mac OS X) AppleWebKit/625.2.7 (KHTML, like Gecko) Version/19.0 Mobile/15E148 Safari/625.2.7',
+    browser: 'Safari',
+    os: 'iPadOS',
+    device: 'Tablet',
+    lastUpdated: '2025-03-10',
+    popularity: 1.8,
+    category: 'tablet',
+    description: 'Safari 19 on iPad Pro with M5 chip running iPadOS 18.4. Takes advantage of the device\'s desktop-class processor for enhanced browsing performance.'
+  },
   
   // Tablet Browsers (Android)
   {
-    id: '23',
+    id: '46',
     name: 'Chrome 135 (Android Tablet)',
     value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
     browser: 'Chrome',
@@ -303,7 +579,7 @@ export const userAgents: UserAgent[] = [
     description: 'Chrome 135 on Android 16 tablets. Features tablet-optimized UI with enhanced productivity tools and multitasking capabilities.'
   },
   {
-    id: '24',
+    id: '47',
     name: 'Samsung Internet 25 (Android Tablet)',
     value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/25.0 Chrome/135.0.0.0 Safari/537.36',
     browser: 'Samsung Internet',
@@ -314,10 +590,70 @@ export const userAgents: UserAgent[] = [
     category: 'tablet',
     description: 'Samsung Internet 25 on Samsung tablets running Android 16. Optimized for S-Pen integration and Samsung\'s ecosystem.'
   },
+  {
+    id: '48',
+    name: 'Firefox 130 (Android Tablet)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) Gecko/130.0 Firefox/130.0',
+    browser: 'Firefox',
+    os: 'Android',
+    device: 'Tablet',
+    lastUpdated: '2025-02-28',
+    popularity: 0.6,
+    category: 'tablet',
+    description: 'Firefox 130 optimized for Android tablets. Features enhanced tab management for larger screens and support for Firefox extensions.'
+  },
+  {
+    id: '49',
+    name: 'Edge 135 (Android Tablet)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 EdgA/135.0.0.0',
+    browser: 'Edge',
+    os: 'Android',
+    device: 'Tablet',
+    lastUpdated: '2025-03-12',
+    popularity: 0.7,
+    category: 'tablet',
+    description: 'Microsoft Edge 135 on Android tablets. Optimized for larger screens with enhanced productivity features for tablet users.'
+  },
+  {
+    id: '50',
+    name: 'Opera 111 (Android Tablet)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/111.0.0.0',
+    browser: 'Opera',
+    os: 'Android',
+    device: 'Tablet',
+    lastUpdated: '2025-03-05',
+    popularity: 0.5,
+    category: 'tablet',
+    description: 'Opera 111 on Android tablets. Features split-screen browsing and optimized UI for larger displays.'
+  },
+  {
+    id: '51',
+    name: 'Vivaldi 7.5 (Android Tablet)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Vivaldi/7.5.3030.50',
+    browser: 'Vivaldi',
+    os: 'Android',
+    device: 'Tablet',
+    lastUpdated: '2025-03-10',
+    popularity: 0.3,
+    category: 'tablet',
+    description: 'Vivaldi 7.5 on Android tablets. Features advanced tab management, split-screen browsing, and extensive customization options for tablet users.'
+  },
+  {
+    id: '52',
+    name: 'Brave 135 (Android Tablet)',
+    value: 'Mozilla/5.0 (Linux; Android 16; SM-X810) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Brave/135.0.0.0',
+    browser: 'Brave',
+    os: 'Android',
+    device: 'Tablet',
+    lastUpdated: '2025-03-15',
+    popularity: 0.4,
+    category: 'tablet',
+    description: 'Brave 135 on Android tablets. Privacy-focused browser with optimized layout for larger screens and enhanced productivity features.'
+  },
   
   // Web Crawlers and Bots
   {
-    id: '25',
+    id: '53',
     name: 'Googlebot (2025)',
     value: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.5; +http://www.google.com/bot.html) Chrome/135.0.0.0 Safari/537.36',
     browser: 'Googlebot',
@@ -329,7 +665,7 @@ export const userAgents: UserAgent[] = [
     description: 'Google\'s web crawler that indexes content for the Google search engine. 2025 version with enhanced JavaScript rendering capabilities.'
   },
   {
-    id: '26',
+    id: '54',
     name: 'Bingbot (2025)',
     value: 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
     browser: 'Bingbot',
@@ -341,7 +677,7 @@ export const userAgents: UserAgent[] = [
     description: 'Microsoft Bing\'s web crawler that indexes content for the Bing search engine and Microsoft\'s AI services.'
   },
   {
-    id: '27',
+    id: '55',
     name: 'DuckDuckGo Bot (2025)',
     value: 'DuckDuckBot/1.2; (+http://duckduckgo.com/duckduckbot.html)',
     browser: 'DuckDuckBot',
@@ -353,7 +689,7 @@ export const userAgents: UserAgent[] = [
     description: 'Web crawler for the privacy-focused search engine DuckDuckGo, which has gained market share in the privacy-conscious segment.'
   },
   {
-    id: '28',
+    id: '56',
     name: 'ChatGPT Web Crawler',
     value: 'ChatGPT-User/1.0 (+https://openai.com/crawler)',
     browser: 'ChatGPT',
@@ -363,6 +699,54 @@ export const userAgents: UserAgent[] = [
     popularity: 1.1,
     category: 'bot',
     description: 'OpenAI\'s web crawler that indexes content to provide up-to-date information to AI models and chatbots.'
+  },
+  {
+    id: '57',
+    name: 'Applebot (2025)',
+    value: 'Mozilla/5.0 (compatible; Applebot/0.3; +http://www.apple.com/go/applebot)',
+    browser: 'Applebot',
+    os: 'N/A',
+    device: 'Bot',
+    lastUpdated: '2025-02-15',
+    popularity: 0.6,
+    category: 'bot',
+    description: 'Apple\'s web crawler used for services like Siri and Spotlight Suggestions. Increasingly important for indexing content for Apple Intelligence features.'
+  },
+  {
+    id: '58',
+    name: 'Yandex Bot (2025)',
+    value: 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+    browser: 'YandexBot',
+    os: 'N/A',
+    device: 'Bot',
+    lastUpdated: '2025-01-20',
+    popularity: 0.5,
+    category: 'bot',
+    description: 'Web crawler for Yandex search engine, primarily focused on Russian and Eastern European content but with global reach.'
+  },
+  {
+    id: '59',
+    name: 'Anthropic Claude Crawler',
+    value: 'Claude-Web/1.0 (+https://www.anthropic.com/crawler)',
+    browser: 'Claude',
+    os: 'N/A',
+    device: 'Bot',
+    lastUpdated: '2025-03-05',
+    popularity: 0.8,
+    category: 'bot',
+    description: 'Anthropic\'s web crawler that indexes content for their Claude AI assistant, focusing on up-to-date information for AI responses.'
+  },
+  {
+    id: '60',
+    name: 'Baidu Spider (2025)',
+    value: 'Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+    browser: 'Baiduspider',
+    os: 'N/A',
+    device: 'Bot',
+    lastUpdated: '2025-02-05',
+    popularity: 0.7,
+    category: 'bot',
+    description: 'Web crawler for Baidu, China\'s largest search engine. Important for visibility in the Chinese market.'
   }
 ];
 

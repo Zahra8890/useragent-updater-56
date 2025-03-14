@@ -101,13 +101,12 @@ const Admin = () => {
           
           <div className="rounded-xl bg-white p-6 shadow-sm">
             <Tabs defaultValue="general">
-              <TabsList className="mb-6 grid w-full grid-cols-6 gap-4">
+              <TabsList className="mb-6 grid w-full grid-cols-5 gap-4">
                 <TabsTrigger value="general">General Settings</TabsTrigger>
                 <TabsTrigger value="pages">Page Editor</TabsTrigger>
                 <TabsTrigger value="user-agents">User Agents</TabsTrigger>
                 <TabsTrigger value="content">Content Editor</TabsTrigger>
                 <TabsTrigger value="custom-code">Custom Code</TabsTrigger>
-                <TabsTrigger value="auto-update">Auto Update</TabsTrigger>
               </TabsList>
               
               <TabsContent value="general">
@@ -128,10 +127,6 @@ const Admin = () => {
               
               <TabsContent value="custom-code">
                 <CustomCode />
-              </TabsContent>
-              
-              <TabsContent value="auto-update">
-                <AutoUpdate />
               </TabsContent>
             </Tabs>
           </div>
